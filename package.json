@@ -1,19 +1,26 @@
 {
   "name": "mc-royaume-injector",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application to inject or update the modes used for the Royaume modded server.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.4.16",
     "axios": "^0.20.0",
-    "electron": "^10.1.3",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
     "sass-folder-converter": "^1.0.3"
+  },
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "tgm.royaume.injector"
   }
 }
