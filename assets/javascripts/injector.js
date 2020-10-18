@@ -45,6 +45,7 @@ async function defineButtonText(){
         button.textContent = INJECT_COMPLETE;
     }
 
+    document.getElementById("loading").style.display = "none";
 }
 
 // Function for injection :

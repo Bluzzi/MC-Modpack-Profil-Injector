@@ -19,6 +19,25 @@ h1, p {
     color: $color-white;
 }
 
+#loading {
+    height: 100%;
+    width: 100%;
+
+    background-color: $color-gray;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading img {
+    border-radius: 300px;
+
+    height: 40%;
+    width: auto;
+}
 
 // TITLE
 
