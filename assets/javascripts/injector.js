@@ -155,7 +155,7 @@ function configureMinecraftProfil(){
     // Creating profil :
     infoBar.textContent = "configuration du profil minecraft...";
 
-    let data = JSON.parse(fs.readFileSync(minecraftPath + "/launcher_profiles.json"));
+    let data = JSON.parse(fs.readFileSync(minecraftPath + "launcher_profiles.json"));
     let memory = document.getElementById("memory").value;
 
     data.profiles["royaume-modpack"] = {
@@ -168,7 +168,7 @@ function configureMinecraftProfil(){
         type: "custom"
     }
   
-    fs.writeFileSync(minecraftPath + "/launcher_profiles.json", JSON.stringify(data, null, 4));
+    fs.writeFileSync(minecraftPath + "launcher_profiles.json", JSON.stringify(data, null, 4));
     updateSlider(97);
 
     // Download forge :
@@ -202,14 +202,14 @@ function startMinecraft(){
 }
 
 function updateMemory(){
-    let data = JSON.parse(fs.readFileSync(minecraftPath + "/launcher_profiles.json"));
+    let data = JSON.parse(fs.readFileSync(minecraftPath + "launcher_profiles.json"));
     let memory = document.getElementById("memory").value;
 
     data.profiles["royaume-modpack"].javaArgs = "-Xmx" + memory + "m -Xms256m -XX:PermSize=256m -Dminecraft.applet.TargetDirectory=\"" 
         + modpackPath +  "/modpack\" -Dfml.ignorePatchDiscrepancies=true " 
         + "-Dfml.ignoreInvalidMinecraftCertificates=true -Duser.language=en -Duser.country=US",
   
-    fs.writeFileSync(minecraftPath + "/launcher_profiles.json", JSON.stringify(data, null, 4));
+    fs.writeFileSync(minecraftPath + "launcher_profiles.json", JSON.stringify(data, null, 4));
 }
 
 // Slider manager functions :
